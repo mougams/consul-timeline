@@ -1,4 +1,4 @@
-module github.com/shimmerglass/consul-timeline
+module github.com/criteo/consul-timeline
 
 go 1.23
 

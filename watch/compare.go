@@ -8,9 +8,9 @@ import (
 
 	"github.com/hashicorp/consul/types"
 
+	tl "github.com/criteo/consul-timeline/timeline"
 	"github.com/hashicorp/consul/agent/structs"
 	api "github.com/hashicorp/consul/api"
-	tl "github.com/shimmerglass/consul-timeline/timeline"
 )
 
 func (w *Watcher) compareServiceStates(at time.Time, old, new []structs.CheckServiceNode) {

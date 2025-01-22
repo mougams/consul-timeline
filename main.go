@@ -5,17 +5,17 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/shimmerglass/consul-timeline/consul"
-	"github.com/shimmerglass/consul-timeline/storage"
+	"github.com/criteo/consul-timeline/consul"
+	"github.com/criteo/consul-timeline/storage"
 
 	_ "github.com/go-sql-driver/mysql"
 
-	"github.com/shimmerglass/consul-timeline/server"
-	cass "github.com/shimmerglass/consul-timeline/storage/cassandra"
-	"github.com/shimmerglass/consul-timeline/storage/memory"
-	"github.com/shimmerglass/consul-timeline/storage/mysql"
-	tl "github.com/shimmerglass/consul-timeline/timeline"
-	"github.com/shimmerglass/consul-timeline/watch"
+	"github.com/criteo/consul-timeline/server"
+	cass "github.com/criteo/consul-timeline/storage/cassandra"
+	"github.com/criteo/consul-timeline/storage/memory"
+	"github.com/criteo/consul-timeline/storage/mysql"
+	tl "github.com/criteo/consul-timeline/timeline"
+	"github.com/criteo/consul-timeline/watch"
 	log "github.com/sirupsen/logrus"
 )
 

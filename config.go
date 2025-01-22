@@ -8,11 +8,11 @@ import (
 
 	"github.com/ghodss/yaml"
 
-	"github.com/shimmerglass/consul-timeline/consul"
-	"github.com/shimmerglass/consul-timeline/server"
-	cass "github.com/shimmerglass/consul-timeline/storage/cassandra"
-	"github.com/shimmerglass/consul-timeline/storage/memory"
-	"github.com/shimmerglass/consul-timeline/storage/mysql"
+	"github.com/criteo/consul-timeline/consul"
+	"github.com/criteo/consul-timeline/server"
+	cass "github.com/criteo/consul-timeline/storage/cassandra"
+	"github.com/criteo/consul-timeline/storage/memory"
+	"github.com/criteo/consul-timeline/storage/mysql"
 )
 
 type Config struct {

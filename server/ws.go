@@ -3,8 +3,8 @@ package server
 import (
 	"sync"
 
+	tl "github.com/criteo/consul-timeline/timeline"
 	"github.com/gorilla/websocket"
-	tl "github.com/shimmerglass/consul-timeline/timeline"
 	log "github.com/sirupsen/logrus"
 )
 

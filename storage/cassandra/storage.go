@@ -4,10 +4,10 @@ import (
 	"context"
 	"time"
 
+	"github.com/criteo/consul-timeline/storage"
+	tl "github.com/criteo/consul-timeline/timeline"
 	"github.com/gocql/gocql"
 	"github.com/pkg/errors"
-	"github.com/shimmerglass/consul-timeline/storage"
-	tl "github.com/shimmerglass/consul-timeline/timeline"
 )
 
 var _ storage.Storage = (*Storage)(nil)

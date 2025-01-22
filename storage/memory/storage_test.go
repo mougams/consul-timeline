@@ -3,7 +3,7 @@ package memory
 import (
 	"testing"
 
-	tl "github.com/shimmerglass/consul-timeline/timeline"
+	tl "github.com/criteo/consul-timeline/timeline"
 	"github.com/stretchr/testify/require"
 )
 
