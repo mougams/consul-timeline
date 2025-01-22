@@ -11,10 +11,10 @@ func TestWrap(t *testing.T) {
 
 	s := New(Config{MaxSize: 3})
 
-	s.Store(tl.Event{ID: 1})
-	s.Store(tl.Event{ID: 2})
-	s.Store(tl.Event{ID: 3})
-	s.Store(tl.Event{ID: 4})
+	_ = s.Store(tl.Event{ID: 1})
+	_ = s.Store(tl.Event{ID: 2})
+	_ = s.Store(tl.Event{ID: 3})
+	_ = s.Store(tl.Event{ID: 4})
 
 	require.Equal(t,
 		[]tl.Event{

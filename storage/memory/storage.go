@@ -8,8 +8,6 @@ import (
 )
 
 type Storage struct {
-	cfg Config
-
 	events []tl.Event
 	next   int
 	size   int

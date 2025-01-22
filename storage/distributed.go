@@ -76,7 +76,10 @@ func (s *Distributed) lockLoop() {
 		case <-s.stop:
 			atomic.StoreUint32(&s.enabled, 0)
 			log.Info("unlocking storage lock")
-			lock.Unlock()
+			err := lock.Unlock()
+			if err != nil {
+				log.Error(err)
+			}
 			s.done.Done()
 			return
 		}
