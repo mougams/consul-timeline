@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"os"
 
@@ -63,7 +62,7 @@ func GetConfig() Config {
 	cfg.Memory = memory.DefaultConfig
 
 	if *configFileFlag != "" {
-		f, err := ioutil.ReadFile(*configFileFlag)
+		f, err := os.ReadFile(*configFileFlag)
 		if err != nil {
 			log.Fatal(err)
 		}

@@ -38,7 +38,7 @@ type Event struct {
 	ID int32 `json:"-"`
 
 	Time       time.Time `json:"time,omitempty"`
-	Datacenter string    `json:"datacenter,omuitempty"`
+	Datacenter string    `json:"datacenter,omitempty"`
 
 	NodeName      string `json:"node_name,omitempty"`
 	NodeIP        string `json:"node_ip,omitempty"`

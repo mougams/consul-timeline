@@ -73,11 +73,21 @@ func (s *Server) Serve() error {
 			return
 		}
 
-		json.NewEncoder(w).Encode(events)
+		err = json.NewEncoder(w).Encode(events)
+		if err != nil {
+			log.Errorf("encoding error %s", err)
+			http.Error(w, err.Error(), 500)
+			return
+		}
 	})
 
 	s.router.GET("/filter-entries", func(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
-		json.NewEncoder(w).Encode(s.services.FilterEntries())
+		err := json.NewEncoder(w).Encode(s.services.FilterEntries())
+		if err != nil {
+			log.Errorf("encoding error %s", err)
+			http.Error(w, err.Error(), 500)
+			return
+		}
 	})
 
 	s.router.GET("/ws", func(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
@@ -97,7 +107,12 @@ func (s *Server) Serve() error {
 	})
 
 	s.router.GET("/status", func(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
-		w.Write([]byte("OK"))
+		_, err := w.Write([]byte("OK"))
+		if err != nil {
+			log.Errorf("/status error %s", err)
+			http.Error(w, err.Error(), 500)
+			return
+		}
 	})
 
 	s.router.GET("/metrics", func(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
