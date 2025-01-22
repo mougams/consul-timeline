@@ -4,9 +4,9 @@ import (
 	"context"
 	"time"
 
+	tl "github.com/criteo/consul-timeline/timeline"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
-	tl "github.com/shimmerglass/consul-timeline/timeline"
 )
 
 var (

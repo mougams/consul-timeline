@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
+	tl "github.com/criteo/consul-timeline/timeline"
 	"github.com/pkg/errors"
-	tl "github.com/shimmerglass/consul-timeline/timeline"
 )
 
 type filter struct {

@@ -9,7 +9,7 @@ import (
 
 	"github.com/rakyll/statik/fs"
 
-	_ "github.com/shimmerglass/consul-timeline/server/public" // TODO: Replace with the absolute import path
+	_ "github.com/criteo/consul-timeline/server/public" // TODO: Replace with the absolute import path
 )
 
 func (s *Server) serveStatic() {

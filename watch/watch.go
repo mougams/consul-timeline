@@ -6,8 +6,8 @@ import (
 	"sync/atomic"
 	"time"
 
+	tl "github.com/criteo/consul-timeline/timeline"
 	"github.com/hashicorp/consul/agent/structs"
-	tl "github.com/shimmerglass/consul-timeline/timeline"
 	log "github.com/sirupsen/logrus"
 )
 

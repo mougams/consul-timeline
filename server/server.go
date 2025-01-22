@@ -6,11 +6,11 @@ import (
 	"net/http/pprof"
 
 	"github.com/NYTimes/gziphandler"
+	"github.com/criteo/consul-timeline/storage"
+	tl "github.com/criteo/consul-timeline/timeline"
 	"github.com/gorilla/websocket"
 	"github.com/julienschmidt/httprouter"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"github.com/shimmerglass/consul-timeline/storage"
-	tl "github.com/shimmerglass/consul-timeline/timeline"
 	log "github.com/sirupsen/logrus"
 )
 

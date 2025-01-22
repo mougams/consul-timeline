@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	tl "github.com/shimmerglass/consul-timeline/timeline"
+	tl "github.com/criteo/consul-timeline/timeline"
 )
 
 type Query struct {
