@@ -3,7 +3,7 @@ GOARCH ?= amd64
 OUT ?= consul-timeline
 
 deps:
-	go get github.com/rakyll/statik
+	go install github.com/rakyll/statik
 
 static: deps
 	statik -f -src=./public -dest=server/ -p public
